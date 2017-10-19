@@ -1,3 +1,0 @@
-# foolz-dots
-
-foolz-dots
