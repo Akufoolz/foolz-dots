@@ -1,6 +1,6 @@
 # foolz-dots
 
-foolz-dots
+foolz-dots v0.3
 
 **OS:** [Arch Linux](https://www.archlinux.org/)  
 **WM:** [i3-gaps](https://github.com/Airblader/i3)  
@@ -12,4 +12,5 @@ foolz-dots
 **Browser:** [Firefox-Developer](https://aur.archlinux.org/packages/firefox-developer)  
 **File Manager:** [Ranger](https://wiki.archlinux.org/index.php/Ranger)  
 
-[![Current Screenshots](https://imgur.com/JCf1z5p)](https://imgur.com/a/HgbX1)  
+[Screenshots Gallery](https://imgur.com/a/HgbX1)
+![image](https://i.imgur.com/JCf1z5p.png)  
