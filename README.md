@@ -12,4 +12,4 @@ foolz-dots
 **Browser:** [Firefox-Developer](https://aur.archlinux.org/packages/firefox-developer)  
 **File Manager:** [Ranger](https://wiki.archlinux.org/index.php/Ranger)  
 
-[Current Screenshots](https://imgur.com/a/HgbX1)  
+[![Current Screenshots](https://imgur.com/JCf1z5p)](https://imgur.com/a/HgbX1)  
