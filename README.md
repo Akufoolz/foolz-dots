@@ -10,4 +10,5 @@
 **Browser:** [Firefox-Developer](https://aur.archlinux.org/packages/firefox-developer)  
 **File Manager:** [Ranger](https://wiki.archlinux.org/index.php/Ranger)  
 
-[![image](https://i.imgur.com/JCf1z5p.png)](https://imgur.com/a/HgbX1)
+Click for more images:
+[![click for more images](https://i.imgur.com/JCf1z5p.png)](https://imgur.com/a/HgbX1)
