@@ -65,16 +65,17 @@ padding-right = 0
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = fixed:pixelsize=9;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-0 = Liberation Sans:pixelsize=9;1
+;font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-1 = siji:pixelsize=10;1
 font-2 = siji:pixelsize=10;1
 
 modules-left = bspwm i3
 modules-center = 
-modules-right = wlan eth memory cpu temperature battery volume date 
+modules-right = wlan eth memory cpu temperature battery xbacklight volume date 
 ;modules-right = filesystem xbacklight volume xkeyboard memory cpu wlan eth battery temperature date powermenu
 
-tray-position = 
+tray-position = right 
 tray-padding = 2
 ;tray-transparent = true
 ;tray-background = #0063ff
@@ -193,16 +194,16 @@ label-song-ellipsis = true
 type = internal/xbacklight
 
 format = <label> <bar>
-label = BL
+label = 
 
-bar-width = 10
-bar-indicator = |
+bar-width = 6 
+bar-indicator = ●
 bar-indicator-foreground = #ff
 bar-indicator-font = 2
-bar-fill = ─
+bar-fill = ●
 bar-fill-font = 2
 bar-fill-foreground = #9f78e1
-bar-empty = ─
+bar-empty = ●
 bar-empty-font = 2
 bar-empty-foreground = ${colors.foreground-alt}
 
@@ -233,7 +234,7 @@ interface = wlp2s0b1
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
-format-connected-underline = #9f78e1
+format-connected-underline = ${colors.purple}
 label-connected = %essid%
 
 format-disconnected =
@@ -318,14 +319,14 @@ adapter = ADP1
 full-at = 98
 
 format-charging = <animation-charging> <label-charging>
-format-charging-underline = ${colors.pink} 
+format-charging-underline = ${colors.purple} 
 
 format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-underline = ${colors.select}
+format-discharging-underline = ${colors.pink}
 
 format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
-format-full-underline = ${colors.purple}
+format-full-underline = ${colors.green}
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 

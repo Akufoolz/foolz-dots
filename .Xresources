@@ -30,9 +30,13 @@
 *.color7:     #BFBFBF
 *.color15:    #E6E6E6
 
+! Set Liberation font
+! *.font: xft:Liberation Mono:size=9
+*.font: xft:Liberation Mono:size=9
+
 ! URxvt configs
 URxvt.scrollBar: false
-! URxvt.letterSpace: -1
+URxvt.letterSpace: -1
 
 Xft.dpi: 96
 Xft.antialias: true
