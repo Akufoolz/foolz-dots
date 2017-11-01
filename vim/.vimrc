@@ -36,7 +36,7 @@ set wrap
 set linebreak
 
 " set tabs to four spaces
-set tabstop=4 shiftwidth=4
+set tabstop=2 shiftwidth=2
 
 " use spaces instead of tabs
 " set expandtab
@@ -46,6 +46,9 @@ set ignorecase
 
 " smartcase when searching
 set smartcase
+
+" enable spellcheck
+"set spell
 
 " ░▒▓ CUSTOM REMAP SETTINGS ▓▒░
 

@@ -37,7 +37,8 @@ bindsym $mod+Return exec termite
 bindsym $mod+Shift+q kill
 
 # start rofi
-bindsym $mod+F2 exec rofi -show drun
+#bindsym $mod+F2 exec rofi -show drun
+bindsym $mod+F2 exec rofi -combi-modi window#drun -show combi -modi combi  
 
 # start dmenu (a program launcher)
 # bindsym $mod+d exec dmenu_run
@@ -97,13 +98,13 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # Create variables for workspace names
-set $ws1 "1:code"
+set $ws1 "1:hack"
 set $ws2 "2:surf"
-set $ws3 "3:bash"
-set $ws4 "4:smrt"
-set $ws5 "5:conf"
-set $ws6 "6:wall"
-set $ws7 "7:"
+set $ws3 "3:term"
+set $ws4 "4:code"
+set $ws5 "5:wave"
+set $ws6 "6:conf"
+set $ws7 "7:wall"
 set $ws8 "8:"
 set $ws9 "9:"
 set $ws10 "10:"
@@ -242,4 +243,4 @@ exec --no-startup-id nm-applet --sm-disable # Network Manager system tray app
 #exec --no-startup-id tint2 # Tint2 Bar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id variety # Variety background fetcher/changer
-exec --no-startup-id volumeicon # Simple volume system tray app
+#exec --no-startup-id volumeicon # Simple volume system tray app

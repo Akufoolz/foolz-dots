@@ -51,7 +51,7 @@ background = ${colors.background}
 foreground = ${colors.foreground}
 
 line-size = 4 
-line-color = #f00
+;line-color = #f00
 
 border-left-size = 16
 border-top-size = 16
@@ -67,12 +67,13 @@ module-margin-right = 2
 
 font-0 = Liberation Sans:pixelsize=9;1
 ;font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-1 = siji:pixelsize=10;1
-font-2 = siji:pixelsize=10;1
+font-1 = Wuncon Siji:pixelsize=10 
+font-2 = Wuncon Siji:pixelsize=10 
+
 
 modules-left = bspwm i3
 modules-center = 
-modules-right = wlan eth memory cpu temperature battery xbacklight volume date 
+modules-right = eth memory cpu temperature battery xbacklight volume date 
 ;modules-right = filesystem xbacklight volume xkeyboard memory cpu wlan eth battery temperature date powermenu
 
 tray-position = right 
@@ -142,7 +143,7 @@ label-empty-padding = 2
 
 [module/i3]
 type = internal/i3
-;format = <label-state> <label-mode>
+format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
 strip-wsnumbers = true
@@ -193,12 +194,12 @@ label-song-ellipsis = true
 [module/xbacklight]
 type = internal/xbacklight
 
-format = <label> <bar>
+format = <bar> <label> 
 label = 
 
 bar-width = 6 
 bar-indicator = ●
-bar-indicator-foreground = #ff
+bar-indicator-foreground = ${colors.fg} 
 bar-indicator-font = 2
 bar-fill = ●
 bar-fill-font = 2
@@ -217,16 +218,18 @@ type = internal/cpu
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = ${colors.select} 
+format-underline = ${colors.purple} 
 label = %percentage%%
+label-padding = 2
 
 [module/memory]
 type = internal/memory
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = ${colors.select}
+format-underline = ${colors.purple}
 label = %percentage_used%%
+label-padding = 2
 
 [module/wlan]
 type = internal/network
@@ -235,9 +238,10 @@ interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
 format-connected-underline = ${colors.purple}
+;label-connected = %essid%
 label-connected = %essid%
 
-format-disconnected =
+format-disconnected = 
 ;format-disconnected = <label-disconnected>
 ;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
@@ -276,20 +280,19 @@ date-alt = " %Y-%m-%d"
 time = %I:%M %p
 time-alt = %H:%M:%S
 
-format-prefix = 
+;format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = ${colors.cyan} 
 
-label = %date% %time%
-
-padding-right = 2
+label = %time%
+label-padding = 2
 
 [module/volume]
 type = internal/volume
 
-format-volume = <label-volume> <bar-volume>
-label-volume = 
-label-volume-foreground = ${root.foreground}
+format-volume = <bar-volume>
+label-volume =  
+label-volume-foreground = ${colors.select}
 
 format-muted-prefix = " "
 format-muted-foreground = ${colors.foreground-alt}
@@ -318,6 +321,10 @@ battery = BAT0
 adapter = ADP1
 full-at = 98
 
+label-discharging-padding = 2
+label-charging-padding = 2
+label-full-padding = 2
+
 format-charging = <animation-charging> <label-charging>
 format-charging-underline = ${colors.purple} 
 
@@ -345,13 +352,14 @@ thermal-zone = 0
 warn-temperature = 60
 
 format = <ramp> <label>
-format-underline = ${colors.select}
+format-underline = ${colors.purple}
 format-warn = <ramp> <label-warn>
 format-warn-underline = ${self.format-underline}
 
 label = %temperature%
 label-warn = %temperature%
 label-warn-foreground = ${colors.secondary}
+label-padding = 2
 
 ramp-0 = 
 ramp-1 = 
