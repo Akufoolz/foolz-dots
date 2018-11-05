@@ -1,0 +1,143 @@
+" ▓▒░ AKUFOOLZ VIM DOTFILE ░▒▓
+
+" ▓▒░ VIM-PLUG SETTINGS ░▒▓
+
+" specify directory for plugins
+call plug#begin('~/.vim/plugged')
+
+" plugins go here
+
+" generic plugins
+Plug 'tpope/vim-sensible'
+Plug 'kien/ctrlp.vim'
+Plug 'itchyny/lightline.vim'
+
+" colorschemes
+Plug 'arcticicestudio/nord-vim'
+Plug 'dracula/vim'
+
+" autocomplete
+Plug 'lifepillar/vim-mucomplete'
+
+" syntax checking
+Plug 'vim-syntastic/syntastic'
+
+" python plugins
+Plug 'davidhalter/jedi-vim'
+
+" javascript plugins
+Plug 'ternjs/tern_for_vim'
+
+" initialize plugin system
+call plug#end()
+
+" ▓▒░ GENERAL VIM SETTINGS ░▒▓
+
+" initiate vim-sensible at runtime to allow overwriting
+runtime! plugin/sensible.vim
+
+" UTF
+scriptencoding utf-8
+set encoding=utf-8
+
+" auto set pwd
+set autochdir
+
+" remove status line information
+set noshowmode
+
+" show line numbers
+set number
+
+" show tabline
+set showtabline=2
+
+" wrap lines
+set wrap
+
+" enable linebreaks
+set linebreak
+
+" set tabs to four spaces
+set tabstop=4 shiftwidth=4
+
+" use spaces instead of tabs
+set expandtab
+
+" ignore case when searching
+set ignorecase
+
+" smartcase when searching
+set smartcase
+
+" ▓▒░ CUSTOM REMAP SETTINGS ░▒▓
+
+" remap jj to escape in insert mode
+inoremap jj <ESC>
+
+" remove all trailing whitespace by pressing F5
+nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
+
+" ▓▒░ COLOR SCHEME SETTINGS ░▒▓
+
+" set vim color scheme + options
+colorscheme dracula 
+" let g:nord_italic_comments = 1
+"colorscheme nord
+
+" ▓▒░ GVIM GUI SETTINGS ░▒▓
+
+if has('gui_running')
+
+	" set gvim font
+	set guifont=DejaVu_Sans_Mono:h10:cANSI:qDRAFT
+	
+	" remove gvim gui elements
+	set guioptions-=m
+	set guioptions-=T
+	set guioptions-=r
+	set guioptions-=L
+	set guioptions-=e
+endif
+
+" ▓▒░ LIGHTLINE SETTINGS ░▒▓
+
+let g:lightline = {
+	\ 'colorscheme': 'Dracula',
+	\ 'separator': { 'left': '▓▒░', 'right': '░▒▓' },
+	\ 'subseparator': { 'left': '▒', 'right': '░' }
+\ }
+
+" ▓▒░ MUCOMPLETE PLUGIN SETTINGS ░▒▓
+
+" mandatory for mucomplete
+set completeopt+=menuone
+
+" enable automatic completion
+set completeopt+=noselect
+
+" enable autocomplete at startup
+let g:mucomplete#enable_auto_at_startup = 1
+
+" disable vim bell for completion
+set belloff+=ctrlg
+
+" disable completion messages
+set shortmess+=c 
+
+" disable jedi dot completion
+let g:jedi#popup_on_dot = 0
+
+" ▓▒░ SYNTASTIC SETTINGS ░▒▓
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" ▓▒░ JEDI-VIM FIX ░▒▓
+" py3 import os; sys.executable=os.path.join(sys.prefix, 'python.exe')
